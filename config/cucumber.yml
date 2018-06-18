@@ -1,0 +1,11 @@
+# By default browser is chrome; features, scenarios tagged as
+# manual, todo or wip are not run
+<% formatting = "--format pretty" %>
+<% chrome = "BROWSER=chrome" %>
+<% firefox = "BROWSER=firefox" %>
+<% excluded_tags = "-t ~@manual,~@todo,~@wip" %>
+<% report = "--format html --out reports/report_#{Time.now.strftime("%d_%b_%y_%H_%M")}.html" %>
+default: <%= formatting %>
+         <%= chrome %>
+         <%= excluded_tags %>
+         <%= report %>
