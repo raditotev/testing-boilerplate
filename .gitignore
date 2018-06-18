@@ -1,0 +1,4 @@
+# Exclude test reports
+/reports
+# Exclude Gemfile.lock
+Gemfile.lock
